@@ -48,4 +48,3 @@ chmod 700 -R /data/data/com.termux/files/home/.shortcuts
 cp rtmmine.sh ~/.shortcuts/rtmmine.sh
 cp editconfig.sh ~/.shortcuts/editconfig.sh
 cecho GREEN "Made shortcuts available" | cowsay
-cecho GREEN "cpuminer-in-termux finished building, or was cancelled by user. To enter the miner, do './rtmmine.sh'" | cowsay
