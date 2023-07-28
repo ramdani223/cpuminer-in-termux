@@ -38,13 +38,3 @@ cecho GREEN "Go to 'ubuntu-in-termux' directory..." | cowsay
 unset LD_PRELOAD
 cecho RED "Prep proot... Enter proot and run Build Scripts" | cowsay
 proot --link2symlink -0 -r ubuntu-fs -b /dev -b /proc -b /sys -b ubuntu-fs/tmp:/dev/shm -w /root /usr/bin/env -i "HOME=/root" "PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/games:/usr/local/bin:/usr/local/sbin:/usr/local/games" bash -c "chmod +x rtmsetup2.sh ; ./rtmsetup2.sh"
-cd
-mv rtmmine1.sh rtmmine.sh
-cecho GREEN "Rename 'rtmmine1.sh' to 'rtmmine.sh'..." | cowsay
-chmod +x rtmmine.sh
-cecho GREEN "Grant executable privilege to run..." | cowsay
-mkdir -p /data/data/com.termux/files/home/.shortcuts
-chmod 700 -R /data/data/com.termux/files/home/.shortcuts
-cp rtmmine.sh ~/.shortcuts/rtmmine.sh
-cp editconfig.sh ~/.shortcuts/editconfig.sh
-cecho GREEN "Made shortcuts available" | cowsay
